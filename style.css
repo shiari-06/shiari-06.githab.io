@@ -29,6 +29,20 @@ body {
 }
 
 /* --------------------
+    スクロールフェードイン
+-------------------- */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------------------
      プロフィールヘッダー
 -------------------- */
 .profile-header {
@@ -181,6 +195,39 @@ iframe {
 }
 
 /* --------------------
+    カテゴリフィルタータブ
+-------------------- */
+.category-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.tab-btn {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-sub);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  background: #eef1f6;
+}
+
+.tab-btn.is-active {
+  background: var(--theme-color);
+  color: #ffffff;
+  border-color: var(--theme-color);
+}
+
+/* --------------------
         スライダー
 -------------------- */
 .slider-container {
@@ -188,7 +235,7 @@ iframe {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 20px auto 10px;
+  margin: 10px auto;
 }
 
 .slider-track-wrapper {
@@ -215,20 +262,56 @@ iframe {
 }
 
 .slide-category {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
   color: var(--theme-color);
   background: #eef1f6;
   padding: 4px 12px;
   border-radius: 20px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .slide img {
   max-width: 100%;
-  max-height: 420px;
+  max-height: 380px;
   object-fit: contain;
   border-radius: 6px;
+}
+
+/* いいねボタン */
+.like-btn {
+  margin-top: 14px;
+  background: #fdf2f4;
+  border: 1px solid #f9d2d8;
+  border-radius: 20px;
+  padding: 5px 16px;
+  color: #e0245e;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.15s ease, background 0.2s;
+}
+
+.like-btn:hover {
+  background: #fce4e8;
+  transform: scale(1.05);
+}
+
+.like-btn:active .heart {
+  transform: scale(1.4);
+}
+
+.like-btn.is-liked {
+  background: #e0245e;
+  color: #ffffff;
+  border-color: #e0245e;
+}
+
+.heart {
+  transition: transform 0.2s;
 }
 
 .slider-btn {
