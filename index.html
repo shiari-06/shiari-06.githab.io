@@ -7,16 +7,35 @@
     <title>犬見のポートフォリオ</title>
   </head>
   <body>
+    <!-- ハンバーガーメニューボタン -->
+    <button class="menu-btn" id="menuBtn" aria-label="メニューを開く">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- ナビゲーションメニュー -->
+    <nav class="nav-menu" id="navMenu">
+      <ul>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#profile" class="nav-link">プロフィール</a></li>
+        <li><a href="#skills" class="nav-link">スキル</a></li>
+        <li><a href="#works" class="nav-link">作品一覧</a></li>
+        <li><a href="#contact" class="nav-link">連絡先</a></li>
+        <li><a href="#history" class="nav-link">経歴</a></li>
+      </ul>
+    </nav>
+
     <h1>犬見</h1>
     <img src="スクリーンショット_2026-06-07_2.38.26.png" width="280">
 
-    <h2>About</h2>
+    <h2 id="about">About</h2>
     <p>
       ZEN大学2年生<br>
       作品制作を通して、表現活動を行う。
     </p>
 
-    <h3>Profile</h3>
+    <h3 id="profile">Profile</h3>
     <ul>
       <li>名前：犬見</li>
       <li>所在地：関東</li>
@@ -24,7 +43,7 @@
       <li>得意領域：イラスト制作</li>
     </ul>
 
-    <h3>Skills</h3>
+    <h3 id="skills">Skills</h3>
     <table>
       <tr>
         <th>OS</th>
@@ -40,7 +59,7 @@
       </tr>
     </table>
 
-    <h3>Works</h3>
+    <h3 id="works">Works</h3>
     <!-- スライダー本体 -->
     <div class="slider-container">
       <button class="slider-btn prev-btn" id="slidePrev">&#10094;</button>
@@ -106,12 +125,12 @@
     <!-- 枚数カウント表示 -->
     <div class="slider-counter" id="slideCounter">1 / 11</div>
 
-    <h3>Contact</h3>
+    <h3 id="contact">Contact</h3>
     <ul>
       <li><a href="mailto:257zs03331@student.zen.ac.jp">Mail</a></li>
     </ul>
 
-    <h3>History</h3>
+    <h3 id="history">History</h3>
     <table>
       <tr>
         <th>2022 年</th>
