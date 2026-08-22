@@ -29,28 +29,61 @@ body {
 }
 
 /* --------------------
-        画像全般
+     プロフィールヘッダー
 -------------------- */
-body > img {
-  max-width: 200px;
-  height: auto;
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  background: var(--card-bg);
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  margin-bottom: 30px;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  display: block;
-  margin-bottom: 24px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-name {
+  margin: 0 0 6px 0;
+  font-size: 26px;
+  color: var(--theme-color);
+  border: none;
+}
+
+.profile-bio {
+  margin: 0;
+  color: var(--text-sub);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+    gap: 16px;
+  }
 }
 
 /* --------------------
         見出し
 -------------------- */
-h1 {
-  font-size: 28px;
-  color: var(--theme-color);
-  margin-top: 10px;
-  margin-bottom: 16px;
-}
-
-h2, h3 {
+h3 {
   color: var(--theme-color);
   font-size: 20px;
   margin-top: 40px;
