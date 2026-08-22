@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+  /* ==========================================
+     1. スライダーの処理
+  ========================================== */
   const track = document.getElementById('sliderTrack');
   const slides = Array.from(track.children);
   const prevBtn = document.getElementById('slidePrev');
@@ -41,4 +44,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 初期表示
   updateSlider();
+
+  /* ==========================================
+     2. メニューの処理
+  ========================================== */
+  const menuBtn = document.getElementById('menuBtn');
+  const navMenu = document.getElementById('navMenu');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  // メニューの開閉切り替え
+  menuBtn.addEventListener('click', () => {
+    menuBtn.classList.toggle('is-active');
+    navMenu.classList.toggle('is-active');
+  });
+
+  // リンクをクリックした際にメニューを閉じる
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      menuBtn.classList.remove('is-active');
+      navMenu.classList.remove('is-active');
+    });
+  });
 });
