@@ -76,3 +76,93 @@ th, td {
   border: solid 1px #f0f0f0;
   padding: 0.5rem;
 }
+
+/* スライダー全体の枠組み */
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  margin: 20px auto 10px;
+}
+
+/* 表示エリア（はみ出たスライドを隠す） */
+.slider-track-wrapper {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #fafafa;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* スライドを横一列に並べるトラック */
+.slider-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* 1枚ごとのスライド要素 */
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+/* 作品のカテゴリー名 */
+.slide-category {
+  font-size: 15px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* スライド内の画像 */
+.slide img {
+  max-width: 100%;
+  max-height: 380px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* 前へ・次へボタン */
+.slider-btn {
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  border: none;
+  font-size: 22px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s, transform 0.2s;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.slider-btn:hover {
+  background: rgba(0, 0, 0, 0.85);
+  transform: scale(1.08);
+}
+
+.prev-btn {
+  margin-right: 12px;
+}
+
+.next-btn {
+  margin-left: 12px;
+}
+
+/* ページカウンター */
+.slider-counter {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
